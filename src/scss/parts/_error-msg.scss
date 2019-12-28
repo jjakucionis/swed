@@ -1,0 +1,17 @@
+.error_msg {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease-in-out;
+
+    &__txt {
+        background-color: $white;
+        border: 1px solid red;
+        color: red;
+        padding: 10px 30px;
+        display: inline-block;
+    }
+
+    &.shown {
+        max-height: 40px;
+    }
+}

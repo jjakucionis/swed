@@ -1,0 +1,12 @@
+.form {
+
+    &__item {
+        display: none;
+        position: absolute;
+
+        &.active {
+            display: block;
+            position: relative;
+        }
+    }
+}

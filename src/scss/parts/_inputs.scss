@@ -1,0 +1,28 @@
+input[type=text], input[type=email], select {
+    height: 46px;
+    border: 1px solid $sky;
+    border-radius: 3px;
+    font-family: $font;
+    font-size: 16px;
+    color: $black;
+    padding: 0 20px 0 20px;
+    margin-bottom: 10px;
+
+    & + & {
+        margin-bottom: 15px;;
+    }
+
+    &.hasError {
+        border-color: red;
+    }
+}
+
+select {
+    padding-right: 40px;
+    position: relative;
+    background-image: url(../img/drop.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: 11px;
+}

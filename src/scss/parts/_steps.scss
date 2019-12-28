@@ -1,0 +1,38 @@
+.steps {
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+    margin: 0 auto 50px;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background-color: $orange;
+        z-index: -1;
+        top: 23px;
+        left: 0px;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+        border: 2px solid $orange;
+        border-radius: 50%;
+        color: $brown;
+        font-weight: bold;
+        font-size: 20px;
+        cursor: pointer;
+        background-color: $background;
+
+        &.active {
+            background-color: $orange;
+            color: $white;
+        }
+    }
+}

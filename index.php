@@ -17,48 +17,61 @@
     <section class="section form">
       <div class="container">
 
-        <div class="form_wrapper">
-            <fieldset class="msf_hide">
-                <h2>The first form</h2>
-              <div>
-                <input type="text" name="firstname" placeholder="First Name">
-                <input type="text" name="lastname" placeholder="Last Name">
-              </div>
-              <div>
-                <input type="email" name="email" placeholder=" Your Email">
-              </div>
+        <div class="steps">
+          <div class="steps__item active">1</div>
+          <div class="steps__item">2</div>
+          <div class="steps__item">3</div>
+          <div class="steps__item">4</div>
+        </div>
+
+        <form action="/endpoint.php" class="form">
+
+          <div class="form_wrapper">
+
+              <fieldset class="msf_hide">
+                  <h2 class="subtitle">Įveskite savo vardą ir pavardę</h2>
+                <div>
+                  <input type="text" name="firstname" placeholder="First Name">
+                  <input type="text" name="lastname" placeholder="Last Name">
+                </div>
+                <div>
+                  <input type="email" name="email" placeholder=" Your Email">
+                </div>
+                  <input type="button" name="back" value="Back"  onclick="msf_btn_back()">
+                    <input type="button" name="next" value="Next"  onclick="msf_btn_next()">
+                <div class="msf_bullet_o"></div>
+                <div class="msf_line"></div>
+              </fieldset>
+              
+              <fieldset class="msf_hide">
+                  <h2>This is form 2</h2>
+                  <input type="text" name="school" placeholder="School">
+                  <input type="date" name="date" placeholder="Birthdate">
+                <div>
+                  <input type="radio" name="gender" value="male" checked> Male<br>
+                  <input type="radio" name="gender" value="female"> Female<br>
+                  <input type="radio" name="gender" value="other"> Other
+                </div>
                 <input type="button" name="back" value="Back"  onclick="msf_btn_back()">
                   <input type="button" name="next" value="Next"  onclick="msf_btn_next()">
-              <div class="msf_bullet_o"></div>
-              <div class="msf_line"></div>
-            </fieldset>
-            
-            <fieldset class="msf_hide">
-                <h2>This is form 2</h2>
-                <input type="text" name="school" placeholder="School">
-                <input type="date" name="date" placeholder="Birthdate">
-              <div>
-                <input type="radio" name="gender" value="male" checked> Male<br>
-                <input type="radio" name="gender" value="female"> Female<br>
-                <input type="radio" name="gender" value="other"> Other
-              </div>
-              <input type="button" name="back" value="Back"  onclick="msf_btn_back()">
+                <div class="msf_bullet_o"></div>
+                <div class="msf_line"></div>
+              </fieldset>
+              
+              <fieldset class="msf_hide">
+                  <h2>The last form</h2>
+                  <input type="text" name="name" placeholder="Name">
+                  <input type="email" name="email" placeholder="Email">
+                <input type="button" name="back" value="Back"  onclick="msf_btn_back()">
                 <input type="button" name="next" value="Next"  onclick="msf_btn_next()">
-              <div class="msf_bullet_o"></div>
-              <div class="msf_line"></div>
-            </fieldset>
-            
-            <fieldset class="msf_hide">
-                <h2>The last form</h2>
-                <input type="text" name="name" placeholder="Name">
-                <input type="email" name="email" placeholder="Email">
-              <input type="button" name="back" value="Back"  onclick="msf_btn_back()">
-              <input type="button" name="next" value="Next"  onclick="msf_btn_next()">
-                <input type="submit" name="submit" value="Submit Now!" onclick="">
-              <div class="msf_bullet_o"></div>
-              <div class="msf_line"></div>
-            </fieldset>
-        </div>
+                  <input type="submit" name="submit" value="Submit Now!" onclick="">
+                <div class="msf_bullet_o"></div>
+                <div class="msf_line"></div>
+              </fieldset>
+
+          </div>
+
+        </form>
 
       </div>
     </section>

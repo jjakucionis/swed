@@ -1,0 +1,61 @@
+.headline {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: em(1.5px, 32px);
+    margin-bottom: .5em;
+
+    &--orange {
+        color: $orange;
+    }
+}
+
+.subtitle {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: em(1.5px, 32px);
+    margin-bottom: .5em;
+
+    &--brown {
+        color: $brown;
+    }
+}
+
+.bodyTxt {
+    font-size: 18px;
+    letter-spacing: em(1.5px, 32px);
+    margin-bottom: .5em;
+
+    &--brown {
+        color: $brown;
+    }
+}
+
+.list {
+    font-size: 18px;
+    letter-spacing: em(1.5px, 32px);
+    margin-bottom: .5em;
+
+    li {
+        padding-left: 15px;
+        position: relative;
+        
+        &:not(:last-child) {
+            margin-bottom: .5em;
+        }
+        
+        &::after {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 14px;
+            top: 0px;
+            left: 0px;
+            border-radius: 0 12px 12px 0;
+            background-color: $orange;
+        }
+    }
+    
+    &--brown {
+        color: $brown;
+    }
+}

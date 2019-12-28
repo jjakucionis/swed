@@ -1,0 +1,14 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "max-line-length": [true, 140],
+    "trailing-comma": false,
+    "align": false,
+    "linebreak-style": ["error", "windows"],
+    "eol-last": ["error", "never"]
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}

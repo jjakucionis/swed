@@ -23,4 +23,8 @@
             color: $orange;
         }
     }
+
+    &.hidden {
+        display: none !important;
+    }
 }

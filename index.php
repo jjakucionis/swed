@@ -29,8 +29,8 @@
           <div class="form_wrapper">
 
               <fieldset class="form__item active" data-step="1" data-hascondition>
+                <div class="form__item_wrap">
                   <h2 class="subtitle subtitle--brown">Pasirinkite paskolos tipą:</h2>
-                <div>
                   <select name="loanType" id="loanType">
                     <option value=""></option>
                     <option value="nt-remontui" data-conditionvalue="A">NT Remontui</option>
@@ -39,64 +39,62 @@
                 </div>
               </fieldset>
               
-              <fieldset class="form__item" data-step="2" data-condition="A">
-                <h2 class="subtitle subtitle--brown">Pasirinkite norimą sumą ir terminą:</h2>
-                <div class="slide_container">
-                  <p class="bodyTxt bodyTxt--brown">Paskolos suma: <span class="loan_amount" id="valueA"></span></p>
-                  <input class="slider" type="range" min="300" max="5000" value="1000" id="rangeA">
+              <fieldset class="form__item" data-step="2">
+                <div class="form__item_wrap disabled" data-condition="A">
+                  <h2 class="subtitle subtitle--brown">Pasirinkite norimą sumą ir terminą:</h2>
+                  <div class="slide_container">
+                    <p class="bodyTxt bodyTxt--brown">Paskolos suma: <span class="loan_amount" id="valueA"></span></p>
+                    <input class="slider" type="range" min="300" max="5000" value="1000" id="rangeA">
+                  </div>
+                  <div class="dropdown_container">
+                    <p class="bodyTxt bodyTxt--brown">Paskolos terminas (mėnesiai):</p>
+                    <select name="loan_term">
+                      <option value=""></option>
+                      <option value="6">6</option>
+                      <option value="10">10</option>
+                      <option value="12">12</option>
+                      <option value="24">24</option>
+                      <option value="36">36</option>
+                      <option value="48">48</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="dropdown_container">
-                  <p class="bodyTxt bodyTxt--brown">Paskolos terminas (mėnesiai):</p>
-                  <select name="loan_term">
-                    <option value=""></option>
-                    <option value="6">6</option>
-                    <option value="10">10</option>
-                    <option value="12">12</option>
-                    <option value="24">24</option>
-                    <option value="36">36</option>
-                    <option value="48">48</option>
-                  </select>
-                </div>
-              </fieldset>
-
-              <fieldset class="form__item" data-step="2" data-condition="B">
-                <h2 class="subtitle subtitle--brown">Pasirinkite norimą sumą ir terminą:</h2>
-                <div class="slide_container">
-                  <p class="bodyTxt bodyTxt--brown">Paskolos suma: <span class="loan_amount" id="valueA"></span></p>
-                  <input class="slider" type="range" min="300" max="5000" value="1000" id="rangeA">
-                </div>
-                <div class="dropdown_container">
-                  <p class="bodyTxt bodyTxt--brown">Paskolos terminas (mėnesiai):</p>
-                  <select name="loan_term">
-                    <option value=""></option>
-                    <option value="12">12</option>
-                    <option value="24">24</option>
-                    <option value="36">36</option>
-                    <option value="48">48</option>
-                    <option value="60">60</option>
-                    <option value="72">72</option>
-                  </select>
+                <div class="form__item_wrap disabled" data-condition="B">
+                  <h2 class="subtitle subtitle--brown">Pasirinkite norimą sumą ir terminą:</h2>
+                  <div class="slide_container">
+                    <p class="bodyTxt bodyTxt--brown">Paskolos suma: <span class="loan_amount" id="valueB"></span></p>
+                    <input class="slider" type="range" min="5000" max="50000" value="10000" id="rangeB">
+                  </div>
+                  <div class="dropdown_container">
+                    <p class="bodyTxt bodyTxt--brown">Paskolos terminas (mėnesiai):</p>
+                    <select name="loan_term">
+                      <option value=""></option>
+                      <option value="12">12</option>
+                      <option value="24">24</option>
+                      <option value="36">36</option>
+                      <option value="48">48</option>
+                      <option value="60">60</option>
+                      <option value="72">72</option>
+                    </select>
+                  </div>
                 </div>
               </fieldset>
 
               <fieldset class="form__item" data-step="3">
-                  <h2>This is form 2</h2>
-                  <div>
-                    <input type="email" name="email" placeholder=" Your Email">
-                  </div>
-                  <input type="text" name="school" placeholder="School">
-                  <input type="date" name="date" placeholder="Birthdate">
-                <div>
-                  <input type="radio" name="gender" value="male" checked> Male<br>
-                  <input type="radio" name="gender" value="female"> Female<br>
-                  <input type="radio" name="gender" value="other"> Other
+                <div class="form__item_wrap">
+                  <h2 class="subtitle subtitle--brown">Atsakykite į žemiau esančius klausimus:</h2>
+                  <input type="email" name="education" placeholder="Jūsų išsilavinimas">
+                  <input type="text" name="work" placeholder="Užimamos pareigos">
+                  <input type="number" name="salary" placeholder="Dabartinės pajamos">
                 </div>
               </fieldset>
               
               <fieldset class="form__item" data-step="4">
-                  <h2>The last form</h2>
+                <div class="form__item_wrap">
+                  <h2 class="subtitle subtitle--brown">Asmeniniai duomenys:</h2>
                   <input type="text" name="name" placeholder="Name">
                   <input type="email" name="email" placeholder="Email">
+                </div>
               </fieldset>
 
               <div class="error_msg">

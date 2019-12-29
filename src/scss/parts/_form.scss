@@ -8,5 +8,13 @@
             display: block;
             position: relative;
         }
+
+        &_wrap {
+
+            &.disabled {
+                display: none !important;
+            }
+
+        }
     }
 }

@@ -9,22 +9,26 @@ import validateInput from "./components/validate_input";
 import fieldsetSwitch from "./components/fieldset_switch";
 import loanSliders from "./components/loan_sliders";
 import conditionalFields from "./components/conditional_fields";
+import navButtons from "./components/nav_buttons";
 
 $(document).ready(function () {
     // inits
     switchToForm.init();
     loanSliders.init();
     conditionalFields.init();
+    navButtons.init();
+    
 
     // prev next buttons
     let prevBtn = document.getElementById('back'),
     nextBtn = document.getElementById('next'),
     stepNumber = 1;
-
+    
     prevBtn.addEventListener('click', function(e){
         e.preventDefault();
         fieldsetSwitch.prevFieldset(stepNumber);
         stepNumber--;
+        navButtons.init();
     });
 
     nextBtn.addEventListener('click', function(e){
@@ -32,6 +36,7 @@ $(document).ready(function () {
         if(validateInput.init()) {
             fieldsetSwitch.nextFieldset(stepNumber+1);
             stepNumber++;
-        } 
+        }
+        navButtons.init();
     });    
 });

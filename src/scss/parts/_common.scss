@@ -12,13 +12,58 @@ body {
 }
 
 .container {
-  max-width: $xl;
+  max-width: $md;
   width: 100%;
   padding: 0 50px;
   margin: 0 auto;
+
+  @media screen and (max-width: $sm) {
+    padding: 0 30px;
+  }
 }
 
 .section {
   margin: 100px 0;
+
+  @media screen and (max-width: $sm) {
+    margin: 50px 0;
+  }
+}
+
+.flexwrap {
+  display: flex;
+
+  &--center {
+    justify-content: center;
+  }
+}
+
+table {
+  @media screen and (max-width: $sm) {
+    margin: 0 auto;
+  }
+
+  th {
+    font-size: 18px;
+    font-weight: bold;
+    color: $brown;
+    text-align: right;
+    padding: .5em 1em;
+
+    @media screen and (max-width: $sm) {
+      font-size: 12px;
+    }
+  }
+
+  td {
+    font-size: 18px;
+    color: $brown;
+    text-align: left;
+    padding: .5em 1em;
+
+    @media screen and (max-width: $sm) {
+      font-size: 12px;
+    }
+  }
 }
 

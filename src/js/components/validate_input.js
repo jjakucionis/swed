@@ -11,7 +11,9 @@ export default {
         for (let i = 0; i < select.length; i++) {
             let optionSelected = select[i].options[select[i].selectedIndex].value;
             if(optionSelected === "") {
-                select[i].className += " hasError";
+                if(!select[i].classList.contains('hasError')) {
+                    select[i].className += " hasError";
+                }
                 valid = false;
             } else {
                 select[i].classList.remove("hasError");
@@ -21,7 +23,9 @@ export default {
         for (let i = 0; i < inputs.length; i++) {
             let inputsVal = inputs[i].value;
             if(inputsVal === "") {
-                inputs[i].className += " hasError";
+                if(!inputs[i].classList.contains('hasError')) {
+                    inputs[i].className += " hasError";
+                }
                 valid = false;
             } else {
                 inputs[i].classList.remove("hasError");

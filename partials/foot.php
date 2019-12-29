@@ -4,6 +4,5 @@
   <?php else: ?>
   <script type="text/javascript" src="http://localhost:5000/assets/app.js"></script>
   <?php endif; ?>
-  <?php include 'ausele.php'; ?>
 </body>
 </html>

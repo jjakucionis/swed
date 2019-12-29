@@ -14,5 +14,9 @@
     &.shown {
         max-height: 40px;
         transition: max-height .3s ease-in-out;
+
+        @media screen and (max-width: $sm) {
+            max-height: 50px;
+          }
     }
 }

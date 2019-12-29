@@ -1,5 +1,4 @@
 <?php include './partials/head.php'; ?>
-<?php include './partials/header.php'; ?>
 <main>
     <section class="section intro active">
         <div class="container">
@@ -28,18 +27,18 @@
 
           <div class="form_wrapper">
 
-              <fieldset class="form__item active" data-step="1" data-hascondition>
+              <fieldset class="form__item active" data-step="1" id="conditional" data-hascondition>
                 <div class="form__item_wrap">
                   <h2 class="subtitle subtitle--brown">Pasirinkite paskolos tipą:</h2>
                   <select name="loanType" id="loanType">
                     <option value=""></option>
-                    <option value="nt-remontui" data-conditionvalue="A">NT Remontui</option>
-                    <option value="nt-pirkimui" data-conditionvalue="B">NT Pirkimui</option>
+                    <option value="NT Remontui" data-conditionvalue="A">NT Remontui</option>
+                    <option value="NT Pirkimui" data-conditionvalue="B">NT Pirkimui</option>
                   </select>
                 </div>
               </fieldset>
               
-              <fieldset class="form__item" data-step="2">
+              <fieldset class="form__item" data-step="2" >
                 <div class="form__item_wrap disabled" data-condition="A">
                   <h2 class="subtitle subtitle--brown">Pasirinkite norimą sumą ir terminą:</h2>
                   <div class="slide_container">
@@ -48,7 +47,7 @@
                   </div>
                   <div class="dropdown_container">
                     <p class="bodyTxt bodyTxt--brown">Paskolos terminas (mėnesiai):</p>
-                    <select name="loan_term">
+                    <select name="loan_term" id="termA">
                       <option value=""></option>
                       <option value="6">6</option>
                       <option value="10">10</option>
@@ -67,7 +66,7 @@
                   </div>
                   <div class="dropdown_container">
                     <p class="bodyTxt bodyTxt--brown">Paskolos terminas (mėnesiai):</p>
-                    <select name="loan_term">
+                    <select name="loan_term"  id="termB">
                       <option value=""></option>
                       <option value="12">12</option>
                       <option value="24">24</option>
@@ -83,17 +82,32 @@
               <fieldset class="form__item" data-step="3">
                 <div class="form__item_wrap">
                   <h2 class="subtitle subtitle--brown">Atsakykite į žemiau esančius klausimus:</h2>
-                  <input type="email" name="education" placeholder="Jūsų išsilavinimas">
-                  <input type="text" name="work" placeholder="Užimamos pareigos">
-                  <input type="number" name="salary" placeholder="Dabartinės pajamos">
+                  <div class="input_wrap">
+                    <label for="education">Jūsų išsilavinimas</label>
+                    <input type="email" name="education" id="education">
+                  </div>
+                  <div class="input_wrap">
+                    <label for="work">Užimamos pareigos</label>
+                    <input type="text" name="work" id="work">
+                  </div>
+                  <div class="input_wrap">
+                    <label for="salary">Dabartinės pajamos</label>
+                    <input type="number" name="salary" id="salary">
+                  </div>
                 </div>
               </fieldset>
               
               <fieldset class="form__item" data-step="4">
                 <div class="form__item_wrap">
                   <h2 class="subtitle subtitle--brown">Asmeniniai duomenys:</h2>
-                  <input type="text" name="name" placeholder="Name">
-                  <input type="email" name="email" placeholder="Email">
+                  <div class="input_wrap">
+                    <label for="name">Vardas pavardė</label>
+                    <input type="text" name="name" id="name">
+                  </div>
+                  <div class="input_wrap">
+                    <label for="email">El. pašto adresas</label>
+                    <input type="email" name="email" id="email">
+                  </div>
                 </div>
               </fieldset>
 
@@ -105,15 +119,54 @@
         </form>
         <a href id="back" class="button button--secondary">Atgal</a>
         <a href id="next" class="button">Toliau</a>
+        <a href id="submit" class="button hidden">Pateikti paraišką</a>
 
       </div>
     </section>
     <section class="section summary">
-      <div class="container">
-        This is your summary
+      <div class="container flexwrap flexwrap--center">
+        <div>
+          <h2 class="subtitle subtitle--brown">Jūsų paraiška priimta</h2>
+          <p class="bodyTxt bodyTxt--brown">Žemiau pateikiami formos duomenys:</p>
+          <table>
+            <tbody>
+              <tr>
+                <th>Paskolos tipas:</th>
+                <td id="lType"></td>
+              </tr>
+              <tr>
+                <th>Paskolos suma:</th>
+                <td id="lSum"></td>
+              </tr>
+              <tr>
+                <th>Paskolos terminas:</th>
+                <td id="lDuration"></td>
+              </tr>
+              <tr>
+                <th>Išsilavinimas:</th>
+                <td id="edu"></td>
+              </tr>
+              <tr>
+                <th>Pareigos:</th>
+                <td id="position"></td>
+              </tr>
+              <tr>
+                <th>Pajamos:</th>
+                <td id="sal"></td>
+              </tr>
+              <tr>
+                <th>Vardas:</th>
+                <td id="nam"></td>
+              </tr>
+              <tr>
+                <th>El. paštas:</th>
+                <td id="elp"></td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
       </div>
     </section>
 </main>
 
-<?php include './partials/footer.php'; ?>
 <?php include './partials/foot.php'; ?>

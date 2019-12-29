@@ -28,37 +28,54 @@
 
           <div class="form_wrapper">
 
-              <fieldset class="form__item active" data-step="1" data-condition>
+              <fieldset class="form__item active" data-step="1" data-hascondition>
                   <h2 class="subtitle subtitle--brown">Pasirinkite paskolos tipą:</h2>
                 <div>
                   <select name="loanType" id="loanType">
                     <option value=""></option>
-                    <option value="nt-remontui">NT Remontui</option>
-                    <option value="nt-pirkimui">NT Pirkimui</option>
+                    <option value="nt-remontui" data-conditionvalue="A">NT Remontui</option>
+                    <option value="nt-pirkimui" data-conditionvalue="B">NT Pirkimui</option>
                   </select>
                 </div>
               </fieldset>
               
-              <fieldset class="form__item" data-step="2">
-                  <h2>This is form 2</h2>
-                  <input type="text" name="school" placeholder="School">
-                  <input type="date" name="date" placeholder="Birthdate">
-                <div>
-                  <input type="radio" name="gender" value="male" checked> Male<br>
-                  <input type="radio" name="gender" value="female"> Female<br>
-                  <input type="radio" name="gender" value="other"> Other
+              <fieldset class="form__item" data-step="2" data-condition="A">
+                <h2 class="subtitle subtitle--brown">Pasirinkite norimą sumą ir terminą:</h2>
+                <div class="slide_container">
+                  <p class="bodyTxt bodyTxt--brown">Paskolos suma: <span class="loan_amount" id="valueA"></span></p>
+                  <input class="slider" type="range" min="300" max="5000" value="1000" id="rangeA">
                 </div>
-                
+                <div class="dropdown_container">
+                  <p class="bodyTxt bodyTxt--brown">Paskolos terminas (mėnesiai):</p>
+                  <select name="loan_term">
+                    <option value=""></option>
+                    <option value="6">6</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                    <option value="24">24</option>
+                    <option value="36">36</option>
+                    <option value="48">48</option>
+                  </select>
+                </div>
               </fieldset>
 
-              <fieldset class="form__item" data-step="2">
-                  <h2>This is form 2</h2>
-                  <input type="text" name="school" placeholder="School">
-                  <input type="date" name="date" placeholder="Birthdate">
-                <div>
-                  <input type="radio" name="gender" value="male" checked> Male<br>
-                  <input type="radio" name="gender" value="female"> Female<br>
-                  <input type="radio" name="gender" value="other"> Other
+              <fieldset class="form__item" data-step="2" data-condition="B">
+                <h2 class="subtitle subtitle--brown">Pasirinkite norimą sumą ir terminą:</h2>
+                <div class="slide_container">
+                  <p class="bodyTxt bodyTxt--brown">Paskolos suma: <span class="loan_amount" id="valueA"></span></p>
+                  <input class="slider" type="range" min="300" max="5000" value="1000" id="rangeA">
+                </div>
+                <div class="dropdown_container">
+                  <p class="bodyTxt bodyTxt--brown">Paskolos terminas (mėnesiai):</p>
+                  <select name="loan_term">
+                    <option value=""></option>
+                    <option value="12">12</option>
+                    <option value="24">24</option>
+                    <option value="36">36</option>
+                    <option value="48">48</option>
+                    <option value="60">60</option>
+                    <option value="72">72</option>
+                  </select>
                 </div>
               </fieldset>
 

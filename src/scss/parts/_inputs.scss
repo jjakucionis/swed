@@ -26,3 +26,27 @@ select {
     background-position-x: right;
     background-position-y: 11px;
 }
+
+.slider {
+    width: 50%;
+    height: 30px;
+    outline: none;
+    margin-bottom: 20px;
+
+    &::-webkit-slider-thumb {
+        appearance: none;
+        height: 34px;
+        width: 34px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: $orange;
+    }
+
+    &::-moz-range-thumb {
+        height: 34px;
+        width: 34px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: $orange;
+    }
+}

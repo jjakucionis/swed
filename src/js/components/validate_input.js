@@ -20,6 +20,8 @@ export default {
         } else {
             errorMsg[0].classList.remove("shown");
         }
+
+        return valid;
     }
 }
 
